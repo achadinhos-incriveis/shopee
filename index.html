@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ec421d; /* Fundo laranja */
+            background-color: #ec421d; /* Novo fundo laranja */
             margin: 0;
             padding: 0;
             color: white;
@@ -123,6 +123,46 @@
             text-align: center;
             margin-bottom: 20px;
         }
+
+        /* Ajustes para telas menores (responsivo) */
+        @media (max-width: 768px) {
+            body {
+                display: block;
+            }
+
+            .menu {
+                width: 100%;
+                height: auto;
+                position: relative;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .menu ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .menu ul li {
+                margin: 5px;
+            }
+
+            .conteudo {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            .produtos {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .produto {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -207,7 +247,7 @@
                 <div class="produto">
                     <img src="torneira.png" alt="Produto Casa">
                     <h2>Torneira Gourmet com Filtro</h2>
-                    <a href="https://s.shopee.com.br/6fTJmbvfVf" class="botao">Compre aqui!</a>
+                    <a href="https://s.shopee.com.br/8Uuy3JmyS3" class="botao">Compre aqui!</a>
                 </div>
             </div>
         </section>
