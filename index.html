@@ -7,18 +7,67 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             background-color: #ff6600; /* Fundo laranja */
             margin: 0;
             padding: 0;
             color: white;
+            display: flex;
+        }
+
+        /* Estilo do menu lateral */
+        .menu {
+            width: 200px;
+            height: 100vh;
+            background: #cc5200;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .menu h2 {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu ul li {
+            margin: 10px 0;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            display: block;
+            padding: 10px;
+            background: #ff6600;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .menu ul li a:hover {
+            background: #b34700;
+        }
+
+        /* Estilo do conteúdo principal */
+        .conteudo {
+            margin-left: 220px; /* Para não ficar atrás do menu */
+            padding: 20px;
+            flex: 1;
         }
 
         header {
-            background-color: #cc5200; /* Laranja mais escuro */
+            background-color: #cc5200;
             padding: 20px;
             font-size: 24px;
             font-weight: bold;
+            text-align: center;
         }
 
         .produtos {
@@ -63,29 +112,86 @@
         .botao:hover {
             background-color: #cc5200;
         }
+
+        /* Para que cada seção tenha um espaçamento correto */
+        .categoria {
+            margin-top: 40px;
+        }
+
+        .categoria h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
-    <header>
-        Promoções Imperdíveis!
-    </header>
-    
-    <section class="produtos">
-        <div class="produto">
-            <img src="https://via.placeholder.com/200" alt="Produto 1">
-            <h2>Nome do Produto 1</h2>
-            <a href="SEU-LINK-DE-AFILIADO-1" class="botao">Compre aqui!</a>
-        </div>
-        <div class="produto">
-            <img src="https://via.placeholder.com/200" alt="Produto 2">
-            <h2>Nome do Produto 2</h2>
-            <a href="SEU-LINK-DE-AFILIADO-2" class="botao">Compre aqui!</a>
-        </div>
-        <div class="produto">
-            <img src="https://via.placeholder.com/200" alt="Produto 3">
-            <h2>Nome do Produto 3</h2>
-            <a href="SEU-LINK-DE-AFILIADO-3" class="botao">Compre aqui!</a>
-        </div>
-    </section>
+
+    <!-- Menu lateral -->
+    <nav class="menu">
+        <h2>Categorias</h2>
+        <ul>
+            <li><a href="#casa">Casa</a></li>
+            <li><a href="#decoracao">Decoração</a></li>
+            <li><a href="#limpeza">Limpeza</a></li>
+            <li><a href="#eletronicos">Eletrônicos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <div class="conteudo">
+        <header>
+            Promoções Imperdíveis!
+        </header>
+
+        <!-- Seção Casa -->
+        <section id="casa" class="categoria">
+            <h2>Casa</h2>
+            <div class="produtos">
+                <div class="produto">
+                    <img src="https://via.placeholder.com/200" alt="Produto Casa">
+                    <h2>Nome do Produto</h2>
+                    <a href="SEU-LINK-DE-AFILIADO" class="botao">Compre aqui!</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Decoração -->
+        <section id="decoracao" class="categoria">
+            <h2>Decoração</h2>
+            <div class="produtos">
+                <div class="produto">
+                    <img src="https://via.placeholder.com/200" alt="Produto Decoração">
+                    <h2>Nome do Produto</h2>
+                    <a href="SEU-LINK-DE-AFILIADO" class="botao">Compre aqui!</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Limpeza -->
+        <section id="limpeza" class="categoria">
+            <h2>Limpeza</h2>
+            <div class="produtos">
+                <div class="produto">
+                    <img src="https://via.placeholder.com/200" alt="Produto Limpeza">
+                    <h2>Nome do Produto</h2>
+                    <a href="SEU-LINK-DE-AFILIADO" class="botao">Compre aqui!</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Eletrônicos -->
+        <section id="eletronicos" class="categoria">
+            <h2>Eletrônicos</h2>
+            <div class="produtos">
+                <div class="produto">
+                    <img src="https://via.placeholder.com/200" alt="Produto Eletrônicos">
+                    <h2>Nome do Produto</h2>
+                    <a href="SEU-LINK-DE-AFILIADO" class="botao">Compre aqui!</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
 </body>
 </html>
